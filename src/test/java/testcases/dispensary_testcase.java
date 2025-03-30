@@ -125,10 +125,10 @@ public class dispensary_testcase extends AppTestBase
 	}
 
 	@Test(priority = 9, groups = {"sanity"}, description="on the Stock page,select Main store from Filter by store dropdown and verify that Main store is selected and stock value are filtered by the selected store name ")
-	public void  selectMainStoreFromFilterSelectMainStoreFromFilter() throws Exception {
+	public void  selectMainStoreFromFilter() throws Exception {
 		dispensary_PagesInstance = new dispensary_Pages(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Assert.assertTrue(dispensary_PagesInstance.selectMainStoreFromFilterSelectMainStoreFromFilter(),"Confirmation message is not present in the current page, Please check manually") ;
+		Assert.assertTrue(dispensary_PagesInstance.selectMainStoreFromFilter(),"Confirmation message is not present in the current page, Please check manually") ;
 		Assert.assertTrue(locatorsFactoryInstance.mainStoreDropDownIsPresent(driver).isSelected(), "Main Store DropDown is selected in the current page, Please check manually");
 	}
 	
